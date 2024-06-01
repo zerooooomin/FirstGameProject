@@ -3,24 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\Kim\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\MyFirstGame\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Kim\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\MyFirstGame\\Assets\\Script\\GameManagerLogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Script\\GameManagerLogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Kim\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\MyFirstGame\\Assets\\Script\\ItemCan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Script\\ItemCan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Kim\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\MyFirstGame\\Assets\\Script\\Player Ball Script.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Script\\Player Ball Script.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Kim\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\MyFirstGame\\Assets\\LittleFriends-CartoonAnimals-Lite\\Demo\\Script\\Demo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\LittleFriends-CartoonAnimals-Lite\\Demo\\Script\\Demo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Kim\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\MyFirstGame\\Assets\\Script\\CameraMove.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Script\\CameraMove.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Kim\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\MyFirstGame\\Assets\\Script\\ItemCan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Script\\ItemCan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Kim\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\MyFirstGame\\Assets\\Script\\SceneLoad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Script\\SceneLoad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Kim\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\MyFirstGame\\Assets\\LittleFriends-CartoonAnimals-Lite\\Demo\\Script\\Demo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\LittleFriends-CartoonAnimals-Lite\\Demo\\Script\\Demo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Kim\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\MyFirstGame\\Assets\\Script\\BackgroundMusic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Script\\BackgroundMusic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Kim\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\MyFirstGame\\Assets\\Script\\GameManagerLogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Script\\GameManagerLogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,24 +38,35 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
+              "Title": "SceneLoad.cs",
+              "DocumentMoniker": "C:\\Users\\Kim\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\MyFirstGame\\Assets\\Script\\SceneLoad.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\SceneLoad.cs",
+              "ToolTip": "C:\\Users\\Kim\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\MyFirstGame\\Assets\\Script\\SceneLoad.cs",
+              "RelativeToolTip": "Assets\\Script\\SceneLoad.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-01T05:36:55.142Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "GameManagerLogic.cs",
               "DocumentMoniker": "C:\\Users\\Kim\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\MyFirstGame\\Assets\\Script\\GameManagerLogic.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\GameManagerLogic.cs",
               "ToolTip": "C:\\Users\\Kim\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\MyFirstGame\\Assets\\Script\\GameManagerLogic.cs",
               "RelativeToolTip": "Assets\\Script\\GameManagerLogic.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAoAAAAfAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-31T11:27:25.967Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-31T11:27:25.967Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "CameraMove.cs",
               "DocumentMoniker": "C:\\Users\\Kim\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\MyFirstGame\\Assets\\Script\\CameraMove.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\CameraMove.cs",
@@ -59,27 +78,29 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "ItemCan.cs",
               "DocumentMoniker": "C:\\Users\\Kim\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\MyFirstGame\\Assets\\Script\\ItemCan.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\ItemCan.cs",
               "ToolTip": "C:\\Users\\Kim\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\MyFirstGame\\Assets\\Script\\ItemCan.cs",
               "RelativeToolTip": "Assets\\Script\\ItemCan.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAABPAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-31T08:47:31.298Z"
+              "WhenOpened": "2024-05-31T08:47:31.298Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "Demo.cs",
               "DocumentMoniker": "C:\\Users\\Kim\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\MyFirstGame\\Assets\\LittleFriends-CartoonAnimals-Lite\\Demo\\Script\\Demo.cs",
               "RelativeDocumentMoniker": "Assets\\LittleFriends-CartoonAnimals-Lite\\Demo\\Script\\Demo.cs",
               "ToolTip": "C:\\Users\\Kim\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\MyFirstGame\\Assets\\LittleFriends-CartoonAnimals-Lite\\Demo\\Script\\Demo.cs",
               "RelativeToolTip": "Assets\\LittleFriends-CartoonAnimals-Lite\\Demo\\Script\\Demo.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-31T07:44:42.427Z"
+              "WhenOpened": "2024-05-31T07:44:42.427Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -89,9 +110,22 @@
               "RelativeDocumentMoniker": "Assets\\Script\\Player Ball Script.cs",
               "ToolTip": "C:\\Users\\Kim\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\MyFirstGame\\Assets\\Script\\Player Ball Script.cs",
               "RelativeToolTip": "Assets\\Script\\Player Ball Script.cs",
-              "ViewState": "AQIAAEgAAAAAAAAAAAAiwEwAAAAIAAAA",
+              "ViewState": "AQIAALMAAAAAAAAAAAAiwMoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-31T07:33:06.881Z"
+              "WhenOpened": "2024-05-31T07:33:06.881Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "BackgroundMusic.cs",
+              "DocumentMoniker": "C:\\Users\\Kim\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\MyFirstGame\\Assets\\Script\\BackgroundMusic.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\BackgroundMusic.cs",
+              "ToolTip": "C:\\Users\\Kim\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\MyFirstGame\\Assets\\Script\\BackgroundMusic.cs",
+              "RelativeToolTip": "Assets\\Script\\BackgroundMusic.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAiwCIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-01T06:03:01.229Z"
             }
           ]
         }
