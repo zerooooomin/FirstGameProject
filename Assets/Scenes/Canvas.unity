@@ -252,6 +252,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: {fileID: 0}
+  recordedTimesText: {fileID: 0}
 --- !u!114 &167950288
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -421,6 +422,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: {fileID: 236227954}
+  recordedTimesText: {fileID: 0}
 --- !u!4 &236678023
 Transform:
   m_ObjectHideFlags: 0
@@ -1623,6 +1625,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: {fileID: 0}
+  recordedTimesText: {fileID: 0}
 --- !u!1 &1483351426
 GameObject:
   m_ObjectHideFlags: 0

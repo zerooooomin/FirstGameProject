@@ -8,6 +8,7 @@ TagManager:
   - Floor
   - Point
   - JumpZone
+  - SuperJumpZone
   layers:
   - Default
   - TransparentFX

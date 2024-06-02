@@ -88,6 +88,12 @@ public class PlayerBall : MonoBehaviour
             isJump = true;
             rigid.AddForce(Vector3.up * jumpZoneJumpPower, ForceMode.Impulse);
         }
+        else if (collision.gameObject.tag == "SuperJumpZone")
+        {
+            float jumpZoneJumpPower = 31f; // 점프존의 점프 힘 조절
+            isJump = true;
+            rigid.AddForce(Vector3.up * jumpZoneJumpPower, ForceMode.Impulse);
+        }
         else if (collision.gameObject.tag == "Floor")
         {
             isJump = false;
