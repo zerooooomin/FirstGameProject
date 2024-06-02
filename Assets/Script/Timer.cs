@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.Collections.Generic;
 
 public class Timer : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class Timer : MonoBehaviour
     private float startTime;
     private bool isTiming = false;
     private static Timer instance = null;
+    public Stack<float> timeRecords = new Stack<float>(); // 시간을 저장할 스택
 
     public static Timer Instance
     {
@@ -16,6 +18,7 @@ public class Timer : MonoBehaviour
 
     void Awake()
     {
+        DontDestroyOnLoad(gameObject);
         if (instance != null && instance != this)
         {
             Destroy(this.gameObject);
@@ -96,5 +99,54 @@ public class Timer : MonoBehaviour
     public float GetElapsedTime()
     {
         return Time.time - startTime;
+    }
+
+    // 시간을 기록하는 메서드 추가
+    public void RecordTime()
+    {
+
+        float elapsedTime = GetElapsedTime();
+        timeRecords.Push(elapsedTime);
+        Debug.Log("Recorded Time: " + elapsedTime); // 추가된 부분: 기록된 시간을 로그에 출력
+        StopTimer();
+
+    }
+
+    // Timer.cs - 기록된 시간을 출력하는 메서드 추가
+    public string GetRecordedTimes()
+    {
+        string recordedTimes = "Recorded Times:\n";
+        foreach (var time in timeRecords)
+        {
+            string minutes = ((int)time / 60).ToString("00");
+            string seconds = (time % 60).ToString("00");
+            recordedTimes += minutes + ":" + seconds + "\n";
+        }
+        return recordedTimes;
+    }
+
+    public void UpdateRecordedTimes(Text recordedTimesText)
+    {
+        string recordedTimes = "Recorded Times:\n";
+        foreach (var time in timeRecords)
+        {
+            string minutes = ((int)time / 60).ToString("00");
+            string seconds = (time % 60).ToString("00");
+            recordedTimes += minutes + ":" + seconds + "\n";
+        }
+        recordedTimesText.text = recordedTimes;
+    }
+
+    // 기록된 시간을 출력하는 메서드 추가
+    public void PrintRecordedTimes()
+    {
+        string recordedTimes = "Recorded Times:\n";
+        foreach (var time in timeRecords)
+        {
+            string minutes = ((int)time / 60).ToString("00");
+            string seconds = (time % 60).ToString("00");
+            recordedTimes += minutes + ":" + seconds + "\n";
+        }
+        Debug.Log(recordedTimes);
     }
 }

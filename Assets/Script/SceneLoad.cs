@@ -5,6 +5,8 @@ using UnityEngine.UI;
 public class SceneLoader : MonoBehaviour
 {
     public Timer timer;
+    public Text recordedTimesText; // Canvas에 있는 Text UI 요소를 참조
+
 
     public void StartGame()
     {
@@ -36,8 +38,12 @@ public class SceneLoader : MonoBehaviour
     // 마지막 씬에서 타이머 중지 및 경과 시간 표시
     public void FinishGame()
     {
+        Debug.Log("FinishGame called"); // 추가된 부분: FinishGame 메서드가 호출되었음을 로그에 출력
+        timer.RecordTime(); // 시간 기록
+        timer.PrintRecordedTimes(); // 기록된 시간을 출력
         timer.ResetTimer();
-        
+
+        //Invoke("ReturnToMainMenu", 2); // 2초뒤 LaunchProjectile함수 호출
         ReturnToMainMenu();
     }
 

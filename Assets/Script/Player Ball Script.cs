@@ -110,16 +110,11 @@ public class PlayerBall : MonoBehaviour
             if (itemCount == manager.totalItemCount)
             {
                 Debug.Log("All items collected. Proceed to next stage.");
-                if (manager.stage == 3)
+                // Game Clear! && Next Stage
+                if (manager.stage == 5)
                 {
-                    if (sceneLoader != null)
-                    {
-                        sceneLoader.FinishGame();
-                    }
-                    else
-                    {
-                        Debug.LogError("SceneLoader component not found on SceneManager object.");
-                    }
+                    Debug.Log("Last stage reached, calling FinishGame");
+                    sceneLoader.FinishGame(); // FinishGame 메서드 호출
                 }
                 else
                 {
@@ -129,6 +124,7 @@ public class PlayerBall : MonoBehaviour
             else
             {
                 Debug.Log("Not all items collected. Restart stage.");
+                // Restart Stage
                 SceneManager.LoadScene(manager.stage);
             }
         }
