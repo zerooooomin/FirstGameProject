@@ -105,13 +105,20 @@ using UnityEngine.SceneManagement;
 public class PlayerBall : MonoBehaviour
 {
     public float jumpPower;
-    public float moveSpeed = 5.0f; // 이동 속도 변수 추가
+    public float moveSpeed = 5.0f;
     public int itemCount;
     public GameManagerLogic manager;
     bool isJump;
     Rigidbody rigid;
     AudioSource audio;
-    public Transform cameraTransform; // 카메라 Transform
+    public Transform cameraTransform;
+
+    void Start()
+    {
+        // 코드를 통해 cameraTransform 변수에 값을 할당합니다.
+        // 예를 들어, 캐릭터가 자신을 따라다니는 메인 카메라가 있다고 가정하고 해당 카메라의 Transform을 할당합니다.
+        cameraTransform = Camera.main.transform;
+    }
 
     private void Awake()
     {
@@ -150,12 +157,11 @@ public class PlayerBall : MonoBehaviour
             moveDirection += cameraTransform.right;
         }
 
-        moveDirection.y = 0; // Y축 이동을 제거하여 평면 이동만 하도록 함
-        moveDirection.Normalize(); // 이동 속도를 일정하게 유지
+        moveDirection.y = 0;
+        moveDirection.Normalize();
 
-        rigid.MovePosition(rigid.position + moveDirection * moveSpeed * Time.fixedDeltaTime); // 이동 속도 적용
+        rigid.MovePosition(rigid.position + moveDirection * moveSpeed * Time.fixedDeltaTime);
 
-        // 플레이어를 이동 방향으로 회전
         if (moveDirection != Vector3.zero)
         {
             Quaternion toRotation = Quaternion.LookRotation(moveDirection, Vector3.up);
@@ -165,8 +171,16 @@ public class PlayerBall : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Floor")
+        if (collision.gameObject.tag == "JumpZone")
+        {
+            float jumpZoneJumpPower = 11f; // 점프존의 점프 힘 조절
+            isJump = true;
+            rigid.AddForce(Vector3.up * jumpZoneJumpPower, ForceMode.Impulse);
+        }
+        else if (collision.gameObject.tag == "Floor")
+        {
             isJump = false;
+        }
     }
 
     void OnTriggerEnter(Collider other)
@@ -174,7 +188,7 @@ public class PlayerBall : MonoBehaviour
         if (other.tag == "Item")
         {
             itemCount++;
-            audio.Play();
+            GetComponent<AudioSource>().Play();
             other.gameObject.SetActive(false);
             manager.GetItem(itemCount);
             Debug.Log("Item collected. Total items: " + itemCount);
@@ -185,7 +199,6 @@ public class PlayerBall : MonoBehaviour
             if (itemCount == manager.totalItemCount)
             {
                 Debug.Log("All items collected. Proceed to next stage.");
-                // Game Clear! && Next Stage
                 if (manager.stage == 3)
                     SceneManager.LoadScene(0);
                 else
@@ -194,7 +207,6 @@ public class PlayerBall : MonoBehaviour
             else
             {
                 Debug.Log("Not all items collected. Restart stage.");
-                // Restart Stage
                 SceneManager.LoadScene(manager.stage);
             }
         }
