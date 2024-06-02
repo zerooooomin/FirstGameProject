@@ -11,7 +11,7 @@ public class FloorDrop : MonoBehaviour
         if (!hasCollided && collision.gameObject.CompareTag("Player"))
         {
             hasCollided = true;
-            StartCoroutine(DropFloorAfterDelay(1f, 0.7f)); // x초 후에 x초 동안 이동
+            StartCoroutine(DropFloorAfterDelay(0.7f, 0.35f)); // x초 후에 x초 동안 이동
         }
     }
 
@@ -20,7 +20,7 @@ public class FloorDrop : MonoBehaviour
         yield return new WaitForSeconds(delay);
 
         Vector3 startPos = transform.position;
-        Vector3 endPos = startPos - Vector3.up * 10f; // 바닥이 아래로 x만큼 이동
+        Vector3 endPos = startPos - Vector3.up * 500f; // 바닥이 아래로 거리 x만큼 이동
 
         float elapsed = 0f;
         while (elapsed < duration)

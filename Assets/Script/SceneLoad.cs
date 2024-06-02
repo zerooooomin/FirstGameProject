@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class SceneLoader : MonoBehaviour
 {
@@ -7,7 +8,10 @@ public class SceneLoader : MonoBehaviour
 
     public void StartGame()
     {
-        timer.StartTimer();
+        if (timer != null)
+        {
+            timer.StartTimer();
+        }
         LoadSceneByNumber(1); // 1번 씬으로 시작
     }
 
@@ -29,10 +33,20 @@ public class SceneLoader : MonoBehaviour
 #endif
     }
 
-    // 메인 화면으로 돌아갈 때 타이머 중지
-    public void ReturnToMainMenu()
+    // 마지막 씬에서 타이머 중지 및 경과 시간 표시
+    public void FinishGame()
     {
-        timer.StopTimer();
+        timer.ResetTimer();
+        
+        ReturnToMainMenu();
+    }
+
+    private void ReturnToMainMenu()
+    {
         SceneManager.LoadScene(0); // 메인 메뉴 씬 번호를 0으로 가정
+        if (timer != null)
+        {
+            timer.ResetTimer(); // 타이머를 리셋하여 초기화
+        }
     }
 }
