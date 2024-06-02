@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
@@ -23,17 +24,46 @@ public class Timer : MonoBehaviour
         else
         {
             instance = this;
+            DontDestroyOnLoad(this.gameObject);
         }
 
-        DontDestroyOnLoad(this.gameObject);
+        FindTimerText();
+    }
 
-        timerText = GameObject.Find("TimerText").GetComponent<Text>();
-        StartTimer();
+    void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if (scene.buildIndex == 0) // 0번 씬으로 돌아오면 타이머 초기화
+        {
+            ResetTimer();
+        }
+        else
+        {
+            FindTimerText();
+        }
+    }
+
+    void FindTimerText()
+    {
+        GameObject timerTextObject = GameObject.Find("TimerText");
+        if (timerTextObject != null)
+        {
+            timerText = timerTextObject.GetComponent<Text>();
+        }
     }
 
     void Update()
     {
-        if (isTiming)
+        if (isTiming && timerText != null) // timerText가 null이 아닌지 확인
         {
             float t = Time.time - startTime;
             string minutes = ((int)t / 60).ToString("00");
@@ -51,24 +81,20 @@ public class Timer : MonoBehaviour
     public void StopTimer()
     {
         isTiming = false;
-        float finalTime = Time.time - startTime;
-        SaveRecord(finalTime);
     }
 
-    private void SaveRecord(float time)
+    public void ResetTimer()
     {
-        // 기존 기록 가져오기
-        string records = PlayerPrefs.GetString("GameRecords", "");
-        // 새로운 기록 추가
-        records += time.ToString("F2") + "\n";
-        // 기록 저장
-        PlayerPrefs.SetString("GameRecords", records);
-
-        // 최단 기록 업데이트
-        float bestTime = PlayerPrefs.GetFloat("BestTime", float.MaxValue);
-        if (time < bestTime)
+        isTiming = false;
+        instance = null;
+        if (timerText != null) // timerText가 null이 아닌지 확인
         {
-            PlayerPrefs.SetFloat("BestTime", time);
+            timerText.text = "00:00";
         }
+    }
+
+    public float GetElapsedTime()
+    {
+        return Time.time - startTime;
     }
 }

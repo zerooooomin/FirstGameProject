@@ -6,7 +6,9 @@ ScriptsOnlyBuild:
     - GameManagerLogic
     - ItemCan
     - PlayerBall
+    - RecordViewer
     - SceneLoader
+    - Timer
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     Unity.TextMeshPro:
@@ -61,11 +63,23 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.SpriteState
   methodsToPreserve:
   - assembly: Assembly-CSharp
+    fullTypeName: RecordViewer
+    methodName: ShowRecords
+  - assembly: Assembly-CSharp
+    fullTypeName: SceneLoader
+    methodName: QuitGame
+  - assembly: Assembly-CSharp
     fullTypeName: SceneLoader
     methodName: QuitGame
   - assembly: Assembly-CSharp
     fullTypeName: SceneLoader
     methodName: LoadSceneByNumber
+  - assembly: Assembly-CSharp
+    fullTypeName: SceneLoader
+    methodName: StartGame
+  - assembly: Assembly-CSharp
+    fullTypeName: RecordViewer
+    methodName: CloseRecords
   sceneClasses:
     Assets/Scenes/Canvas.unity:
     - Class: 1
@@ -117,19 +131,23 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 5050}
     - Class: 114
-      Script: {instanceID: 5298}
+      Script: {instanceID: 5238}
     - Class: 114
-      Script: {instanceID: 5598}
+      Script: {instanceID: 5282}
     - Class: 114
-      Script: {instanceID: 6066}
+      Script: {instanceID: 5302}
     - Class: 114
-      Script: {instanceID: 25144}
+      Script: {instanceID: 5602}
     - Class: 114
-      Script: {instanceID: 25152}
+      Script: {instanceID: 6070}
     - Class: 114
-      Script: {instanceID: 25154}
+      Script: {instanceID: 23978}
     - Class: 114
-      Script: {instanceID: 25156}
+      Script: {instanceID: 23986}
+    - Class: 114
+      Script: {instanceID: 23988}
+    - Class: 114
+      Script: {instanceID: 23990}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -194,6 +212,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1602}
     - Class: 114
+      Script: {instanceID: 2538}
+    - Class: 114
       Script: {instanceID: 2606}
     - Class: 114
       Script: {instanceID: 2810}
@@ -202,15 +222,17 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3552}
     - Class: 114
-      Script: {instanceID: 5298}
+      Script: {instanceID: 5238}
     - Class: 114
-      Script: {instanceID: 5404}
+      Script: {instanceID: 5302}
     - Class: 114
-      Script: {instanceID: 5598}
+      Script: {instanceID: 5408}
     - Class: 114
-      Script: {instanceID: 6066}
+      Script: {instanceID: 5602}
     - Class: 114
-      Script: {instanceID: 7290}
+      Script: {instanceID: 6070}
+    - Class: 114
+      Script: {instanceID: 7294}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -279,6 +301,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1602}
     - Class: 114
+      Script: {instanceID: 2538}
+    - Class: 114
       Script: {instanceID: 2606}
     - Class: 114
       Script: {instanceID: 2810}
@@ -287,15 +311,17 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3552}
     - Class: 114
-      Script: {instanceID: 5298}
+      Script: {instanceID: 5238}
     - Class: 114
-      Script: {instanceID: 5404}
+      Script: {instanceID: 5302}
     - Class: 114
-      Script: {instanceID: 5598}
+      Script: {instanceID: 5408}
     - Class: 114
-      Script: {instanceID: 6066}
+      Script: {instanceID: 5602}
     - Class: 114
-      Script: {instanceID: 7290}
+      Script: {instanceID: 6070}
+    - Class: 114
+      Script: {instanceID: 7294}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -364,6 +390,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1602}
     - Class: 114
+      Script: {instanceID: 2538}
+    - Class: 114
       Script: {instanceID: 2606}
     - Class: 114
       Script: {instanceID: 2810}
@@ -372,15 +400,17 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3552}
     - Class: 114
-      Script: {instanceID: 5298}
+      Script: {instanceID: 5238}
     - Class: 114
-      Script: {instanceID: 5404}
+      Script: {instanceID: 5302}
     - Class: 114
-      Script: {instanceID: 5598}
+      Script: {instanceID: 5408}
     - Class: 114
-      Script: {instanceID: 6066}
+      Script: {instanceID: 5602}
     - Class: 114
-      Script: {instanceID: 7290}
+      Script: {instanceID: 6070}
+    - Class: 114
+      Script: {instanceID: 7294}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1084,10 +1114,22 @@ ScriptsOnlyBuild:
     className: PanelEventHandler
   - hash:
       serializedVersion: 2
+      Hash: 15f7a96bb4ce4378c2bc1f48b576dee3
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Timer
+  - hash:
+      serializedVersion: 2
       Hash: 9dd54ce33440072d6692a67e0c384ad1
     assemblyName: Unity.Timeline
     namespaceName: UnityEngine.Timeline
     className: GroupTrack
+  - hash:
+      serializedVersion: 2
+      Hash: ac5d319eeccfe9e371fd4980303c5bc9
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: RecordViewer
   - hash:
       serializedVersion: 2
       Hash: bf0842d88681628b29beb00b5e2ab785
@@ -1478,18 +1520,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
-  - hash:
-      serializedVersion: 2
-      Hash: 15f7a96bb4ce4378c2bc1f48b576dee3
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: Timer
-  - hash:
-      serializedVersion: 2
-      Hash: 9461b4c8e8548523281561ef1013a252
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: RecordViewer
   platform: 19
   scenePathNames:
   - Assets/Scenes/Canvas.unity
