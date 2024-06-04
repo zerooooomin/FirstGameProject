@@ -15,14 +15,14 @@ public class PlayerBall : MonoBehaviour
     AudioSource audio;
     public Transform cameraTransform;
 
+    private SceneLoader sceneLoader;
+    private bool isSpeedBoostActive = false; // 속도 증가 상태 변수
+
     void Start()
     {
         // 코드를 통해 cameraTransform 변수에 값을 할당합니다.
-        // 예를 들어, 캐릭터가 자신을 따라다니는 메인 카메라가 있다고 가정하고 해당 카메라의 Transform을 할당합니다.
         cameraTransform = Camera.main.transform;
     }
-
-    private SceneLoader sceneLoader;
 
     private void Awake()
     {
@@ -44,6 +44,12 @@ public class PlayerBall : MonoBehaviour
         {
             isJump = true;
             rigid.AddForce(Vector3.up * jumpPower, ForceMode.Impulse);
+        }
+
+        // 마우스 왼쪽 버튼 클릭 시 속도 증가
+        if (Input.GetMouseButtonDown(0) && !isSpeedBoostActive)
+        {
+            StartCoroutine(SpeedBoost());
         }
     }
 
@@ -117,7 +123,7 @@ public class PlayerBall : MonoBehaviour
             {
                 Debug.Log("All items collected. Proceed to next stage.");
                 // Game Clear! && Next Stage
-                if (manager.stage == 5)
+                if (manager.stage == 6)
                 {
                     Debug.Log("Last stage reached, calling FinishGame");
                     sceneLoader.FinishGame(); // FinishGame 메서드 호출
@@ -134,5 +140,15 @@ public class PlayerBall : MonoBehaviour
                 SceneManager.LoadScene(manager.stage);
             }
         }
+    }
+
+    // 속도 증가 코루틴
+    IEnumerator SpeedBoost()
+    {
+        isSpeedBoostActive = true;
+        moveSpeed *= 2; // 속도 2배 증가
+        yield return new WaitForSeconds(1); // 3초간 지속
+        moveSpeed /= 2; // 원래 속도로 복귀
+        isSpeedBoostActive = false;
     }
 }

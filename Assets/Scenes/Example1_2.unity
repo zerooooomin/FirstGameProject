@@ -313,10 +313,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -3002,7 +3002,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1310724915}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 8335994999243249812, guid: 9fcdd91d4fee8f5498d6471dcc03f9f3, type: 3}
       propertyPath: m_LocalScale.x
@@ -3314,13 +3314,8 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 80
   m_CollisionDetection: 0
---- !u!4 &885762260 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8335994999243249812, guid: 9fcdd91d4fee8f5498d6471dcc03f9f3, type: 3}
-  m_PrefabInstance: {fileID: 885762252}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &904317990 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4537874617358942, guid: d35503c960a90ff409e9487296fe0f85, type: 3}
@@ -4652,7 +4647,6 @@ Transform:
   - {fileID: 35422697}
   - {fileID: 1709847331}
   - {fileID: 254758848}
-  - {fileID: 885762260}
   - {fileID: 2139486926}
   - {fileID: 1650234633}
   - {fileID: 1577092981}
@@ -7033,6 +7027,7 @@ SceneRoots:
   - {fileID: 20659248}
   - {fileID: 1031432814}
   - {fileID: 1128390809}
+  - {fileID: 885762252}
   - {fileID: 2139556606}
   - {fileID: 1271678927}
   - {fileID: 1310724915}
