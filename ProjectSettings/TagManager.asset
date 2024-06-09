@@ -9,6 +9,7 @@ TagManager:
   - Point
   - JumpZone
   - SuperJumpZone
+  - WindZone
   layers:
   - Default
   - TransparentFX

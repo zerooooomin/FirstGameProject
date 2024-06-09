@@ -364,6 +364,7 @@
 "Assets/Script/SceneLoad.cs"
 "Assets/Script/Teleporter.cs"
 "Assets/Script/Timer.cs"
+"Assets/Script/WindForce.cs"
 "Assets/SimpleCollectiblesPack/SimpleCollectibleScript.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01_UGUI.cs"
