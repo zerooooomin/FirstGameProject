@@ -1,33 +1,37 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Kim\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\FirstGameProject\\",
+  "WorkspaceRootPath": "C:\\Users\\Kim\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\gitclone\\FirstGameProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Kim\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\FirstGameProject\\Assets\\Script\\Teleporter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Script\\Teleporter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Kim\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\gitclone\\FirstGameProject\\Assets\\Dynamic Floating Text\\Scripts\\DynamicText2D.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Dynamic Floating Text\\Scripts\\DynamicText2D.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Kim\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\FirstGameProject\\Assets\\Script\\GameManagerLogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Script\\GameManagerLogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Kim\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\FirstGameProject\\Assets\\Script\\Player Ball Script.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Kim\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\gitclone\\FirstGameProject\\Assets\\Script\\Player Ball Script.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Script\\Player Ball Script.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Kim\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\FirstGameProject\\Assets\\Script\\FloorDrop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Kim\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\gitclone\\FirstGameProject\\Assets\\Script\\GameManagerLogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Script\\GameManagerLogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Kim\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\gitclone\\FirstGameProject\\Assets\\Script\\Teleporter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Script\\Teleporter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Kim\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\gitclone\\FirstGameProject\\Assets\\Script\\FloorDrop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Script\\FloorDrop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Kim\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\FirstGameProject\\Assets\\Script\\SceneLoad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Kim\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\gitclone\\FirstGameProject\\Assets\\Script\\SceneLoad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Script\\SceneLoad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Kim\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\FirstGameProject\\Assets\\Script\\Timer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Kim\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\gitclone\\FirstGameProject\\Assets\\Script\\Timer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Script\\Timer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Kim\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\FirstGameProject\\Assets\\Script\\RecordViewer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Kim\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\gitclone\\FirstGameProject\\Assets\\Script\\RecordViewer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Script\\RecordViewer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -43,23 +47,35 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Teleporter.cs",
-              "DocumentMoniker": "C:\\Users\\Kim\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\FirstGameProject\\Assets\\Script\\Teleporter.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Teleporter.cs",
-              "ToolTip": "C:\\Users\\Kim\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\FirstGameProject\\Assets\\Script\\Teleporter.cs",
-              "RelativeToolTip": "Assets\\Script\\Teleporter.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAALAAAA",
+              "Title": "DynamicText2D.cs",
+              "DocumentMoniker": "C:\\Users\\Kim\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\gitclone\\FirstGameProject\\Assets\\Dynamic Floating Text\\Scripts\\DynamicText2D.cs",
+              "RelativeDocumentMoniker": "Assets\\Dynamic Floating Text\\Scripts\\DynamicText2D.cs",
+              "ToolTip": "C:\\Users\\Kim\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\gitclone\\FirstGameProject\\Assets\\Dynamic Floating Text\\Scripts\\DynamicText2D.cs",
+              "RelativeToolTip": "Assets\\Dynamic Floating Text\\Scripts\\DynamicText2D.cs",
+              "ViewState": "AQIAADMAAAAAAAAAAAAAABIAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-03T07:32:50.067Z",
+              "WhenOpened": "2024-06-11T06:43:17.023Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "Teleporter.cs",
+              "DocumentMoniker": "C:\\Users\\Kim\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\gitclone\\FirstGameProject\\Assets\\Script\\Teleporter.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Teleporter.cs",
+              "ToolTip": "C:\\Users\\Kim\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\gitclone\\FirstGameProject\\Assets\\Script\\Teleporter.cs",
+              "RelativeToolTip": "Assets\\Script\\Teleporter.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAALAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-03T07:32:50.067Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "FloorDrop.cs",
-              "DocumentMoniker": "C:\\Users\\Kim\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\FirstGameProject\\Assets\\Script\\FloorDrop.cs",
+              "DocumentMoniker": "C:\\Users\\Kim\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\gitclone\\FirstGameProject\\Assets\\Script\\FloorDrop.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\FloorDrop.cs",
-              "ToolTip": "C:\\Users\\Kim\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\FirstGameProject\\Assets\\Script\\FloorDrop.cs",
+              "ToolTip": "C:\\Users\\Kim\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\gitclone\\FirstGameProject\\Assets\\Script\\FloorDrop.cs",
               "RelativeToolTip": "Assets\\Script\\FloorDrop.cs",
               "ViewState": "AQIAAAMAAAAAAAAAAAAAAA0AAAAyAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -67,24 +83,23 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "GameManagerLogic.cs",
-              "DocumentMoniker": "C:\\Users\\Kim\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\FirstGameProject\\Assets\\Script\\GameManagerLogic.cs",
+              "DocumentMoniker": "C:\\Users\\Kim\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\gitclone\\FirstGameProject\\Assets\\Script\\GameManagerLogic.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\GameManagerLogic.cs",
-              "ToolTip": "C:\\Users\\Kim\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\FirstGameProject\\Assets\\Script\\GameManagerLogic.cs",
+              "ToolTip": "C:\\Users\\Kim\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\gitclone\\FirstGameProject\\Assets\\Script\\GameManagerLogic.cs",
               "RelativeToolTip": "Assets\\Script\\GameManagerLogic.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-02T02:01:36.693Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-02T02:01:36.693Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Player Ball Script.cs",
-              "DocumentMoniker": "C:\\Users\\Kim\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\FirstGameProject\\Assets\\Script\\Player Ball Script.cs",
+              "DocumentMoniker": "C:\\Users\\Kim\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\gitclone\\FirstGameProject\\Assets\\Script\\Player Ball Script.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Player Ball Script.cs",
-              "ToolTip": "C:\\Users\\Kim\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\FirstGameProject\\Assets\\Script\\Player Ball Script.cs",
+              "ToolTip": "C:\\Users\\Kim\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\gitclone\\FirstGameProject\\Assets\\Script\\Player Ball Script.cs",
               "RelativeToolTip": "Assets\\Script\\Player Ball Script.cs",
               "ViewState": "AQIAAE4AAAAAAAAAAAAAAFwAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -93,11 +108,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "RecordViewer.cs",
-              "DocumentMoniker": "C:\\Users\\Kim\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\FirstGameProject\\Assets\\Script\\RecordViewer.cs",
+              "DocumentMoniker": "C:\\Users\\Kim\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\gitclone\\FirstGameProject\\Assets\\Script\\RecordViewer.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\RecordViewer.cs",
-              "ToolTip": "C:\\Users\\Kim\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\FirstGameProject\\Assets\\Script\\RecordViewer.cs",
+              "ToolTip": "C:\\Users\\Kim\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\gitclone\\FirstGameProject\\Assets\\Script\\RecordViewer.cs",
               "RelativeToolTip": "Assets\\Script\\RecordViewer.cs",
               "ViewState": "AQIAAAgAAAAAAAAAAAAiwCUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -105,11 +120,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Timer.cs",
-              "DocumentMoniker": "C:\\Users\\Kim\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\FirstGameProject\\Assets\\Script\\Timer.cs",
+              "DocumentMoniker": "C:\\Users\\Kim\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\gitclone\\FirstGameProject\\Assets\\Script\\Timer.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Timer.cs",
-              "ToolTip": "C:\\Users\\Kim\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\FirstGameProject\\Assets\\Script\\Timer.cs",
+              "ToolTip": "C:\\Users\\Kim\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\gitclone\\FirstGameProject\\Assets\\Script\\Timer.cs",
               "RelativeToolTip": "Assets\\Script\\Timer.cs",
               "ViewState": "AQIAAEwAAAAAAAAAAAAQwCUAAAAKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -117,11 +132,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "SceneLoad.cs",
-              "DocumentMoniker": "C:\\Users\\Kim\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\FirstGameProject\\Assets\\Script\\SceneLoad.cs",
+              "DocumentMoniker": "C:\\Users\\Kim\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\gitclone\\FirstGameProject\\Assets\\Script\\SceneLoad.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\SceneLoad.cs",
-              "ToolTip": "C:\\Users\\Kim\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\FirstGameProject\\Assets\\Script\\SceneLoad.cs",
+              "ToolTip": "C:\\Users\\Kim\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\gitclone\\FirstGameProject\\Assets\\Script\\SceneLoad.cs",
               "RelativeToolTip": "Assets\\Script\\SceneLoad.cs",
               "ViewState": "AQIAAB0AAAAAAAAAAAAkwC8AAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",

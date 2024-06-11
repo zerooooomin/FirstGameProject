@@ -24,6 +24,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Example1_4.unity
     guid: 46a9fda366df47e419770a9ea9f8caa2
   - enabled: 1
-    path: Assets/Scenes/Example_Mirror.unity
+    path: Assets/Scenes/Example1_5.unity
+    guid: ea58135a6ed94314d8c19844fce2c062
+  - enabled: 1
+    path: Assets/Scenes/Example1_6.unity
     guid: 7af35e96b94587f4c8c94e04f8b36517
   m_configObjects: {}

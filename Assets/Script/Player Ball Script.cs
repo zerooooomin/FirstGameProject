@@ -123,7 +123,7 @@ public class PlayerBall : MonoBehaviour
             {
                 Debug.Log("All items collected. Proceed to next stage.");
                 // Game Clear! && Next Stage
-                if (manager.stage == 6)
+                if (manager.stage == 7)
                 {
                     Debug.Log("Last stage reached, calling FinishGame");
                     sceneLoader.FinishGame(); // FinishGame 메서드 호출
