@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 8b7dd0809c7c6498789fa32a61eaa6cb, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.3069224, a: 1}
+  m_IndirectSpecularColor: {r: 0.3201431, g: 0.25861406, b: 0.3684007, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -131,6 +131,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8561016988314320162, guid: d35503c960a90ff409e9487296fe0f85, type: 3}
+      propertyPath: effectPrefab
+      value: 
+      objectReference: {fileID: 144344, guid: cd6cd4f9bcaab9d4989dcdae112a3e7c, type: 3}
     - target: {fileID: 1365554409948784, guid: d35503c960a90ff409e9487296fe0f85, type: 3}
       propertyPath: m_Name
       value: Item (3)
@@ -506,7 +510,8 @@ MonoBehaviour:
   superJumpZoneSound: {fileID: 0}
   itemCollectSound: {fileID: 0}
   jumpSound: {fileID: 0}
-  FinishPointSound: {fileID: 0}
+  finishPointSound: {fileID: 0}
+  speedBoostSound: {fileID: 0}
 --- !u!82 &297918735
 AudioSource:
   m_ObjectHideFlags: 0
@@ -611,6 +616,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8561016988314320162, guid: d35503c960a90ff409e9487296fe0f85, type: 3}
+      propertyPath: effectPrefab
+      value: 
+      objectReference: {fileID: 144344, guid: cd6cd4f9bcaab9d4989dcdae112a3e7c, type: 3}
     - target: {fileID: 1365554409948784, guid: d35503c960a90ff409e9487296fe0f85, type: 3}
       propertyPath: m_Name
       value: Item (1)
@@ -725,6 +734,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8561016988314320162, guid: d35503c960a90ff409e9487296fe0f85, type: 3}
+      propertyPath: effectPrefab
+      value: 
+      objectReference: {fileID: 144344, guid: cd6cd4f9bcaab9d4989dcdae112a3e7c, type: 3}
     - target: {fileID: 1365554409948784, guid: d35503c960a90ff409e9487296fe0f85, type: 3}
       propertyPath: m_Name
       value: Item (4)
@@ -1121,7 +1134,7 @@ Transform:
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
   m_LocalRotation: {x: 0.17364816, y: 0, z: 0, w: 0.9848078}
-  m_LocalPosition: {x: 0, y: 4, z: -5}
+  m_LocalPosition: {x: 0, y: 4, z: -7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1140,6 +1153,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 5
+  zoomSpeed: 2
+  minZoom: 5
+  maxZoom: 20
 --- !u!1 &1031967787
 GameObject:
   m_ObjectHideFlags: 0
@@ -1276,13 +1292,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: {fileID: 1382245084}
-  recordedTimesText: {fileID: 0}
-  startButtonAudioSource: {fileID: 0}
-  closeButtonAudioSource: {fileID: 0}
-  recordButtonAudioSource: {fileID: 0}
-  startButtonSound: {fileID: 0}
-  closeButtonSound: {fileID: 0}
-  recordButtonSound: {fileID: 0}
+  recordedTimesText: {fileID: 195064823}
 --- !u!4 &1163615672
 Transform:
   m_ObjectHideFlags: 0
@@ -1386,7 +1396,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 292928571627593708, guid: a77e3c2d1586f054985384808f3d5b4c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.1
+      value: -3
       objectReference: {fileID: 0}
     - target: {fileID: 292928571627593708, guid: a77e3c2d1586f054985384808f3d5b4c, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1872,6 +1882,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8561016988314320162, guid: d35503c960a90ff409e9487296fe0f85, type: 3}
+      propertyPath: effectPrefab
+      value: 
+      objectReference: {fileID: 144344, guid: cd6cd4f9bcaab9d4989dcdae112a3e7c, type: 3}
     - target: {fileID: 1365554409948784, guid: d35503c960a90ff409e9487296fe0f85, type: 3}
       propertyPath: m_Name
       value: Item (2)

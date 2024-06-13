@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 8b7dd0809c7c6498789fa32a61eaa6cb, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.3069224, a: 1}
+  m_IndirectSpecularColor: {r: 0.3201431, g: 0.25861406, b: 0.3684007, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1445,6 +1445,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1310724915}
     m_Modifications:
+    - target: {fileID: -8561016988314320162, guid: d35503c960a90ff409e9487296fe0f85, type: 3}
+      propertyPath: effectPrefab
+      value: 
+      objectReference: {fileID: 144344, guid: cd6cd4f9bcaab9d4989dcdae112a3e7c, type: 3}
     - target: {fileID: 1365554409948784, guid: d35503c960a90ff409e9487296fe0f85, type: 3}
       propertyPath: m_Name
       value: Item (6)
@@ -2292,6 +2296,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 5
+  zoomSpeed: 2
+  minZoom: 5
+  maxZoom: 20
 --- !u!81 &734538366
 AudioListener:
   m_ObjectHideFlags: 0
@@ -2546,9 +2553,9 @@ MonoBehaviour:
   jumpZoneSound: {fileID: 0}
   superJumpZoneSound: {fileID: 0}
   itemCollectSound: {fileID: 0}
-  jumpZoneSoundVolume: 0.5
-  superJumpZoneSoundVolume: 1
-  itemCollectSoundVolume: 1
+  jumpSound: {fileID: 0}
+  finishPointSound: {fileID: 0}
+  speedBoostSound: {fileID: 0}
 --- !u!54 &741958127
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3032,6 +3039,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1310724915}
     m_Modifications:
+    - target: {fileID: -8561016988314320162, guid: d35503c960a90ff409e9487296fe0f85, type: 3}
+      propertyPath: effectPrefab
+      value: 
+      objectReference: {fileID: 144344, guid: cd6cd4f9bcaab9d4989dcdae112a3e7c, type: 3}
     - target: {fileID: 1365554409948784, guid: d35503c960a90ff409e9487296fe0f85, type: 3}
       propertyPath: m_Name
       value: Item (2)
@@ -4397,12 +4408,10 @@ Transform:
   - {fileID: 1356481873}
   - {fileID: 1826074089}
   - {fileID: 2098483645}
-  - {fileID: 2040786820}
   - {fileID: 253125879}
   - {fileID: 1427671368}
   - {fileID: 442751514}
   - {fileID: 529344975}
-  - {fileID: 856505122}
   - {fileID: 1905775735}
   - {fileID: 309523262}
   - {fileID: 1692997799}
@@ -4414,18 +4423,14 @@ Transform:
   - {fileID: 959674084}
   - {fileID: 1598471971}
   - {fileID: 1795289668}
-  - {fileID: 514200736}
   - {fileID: 35422697}
   - {fileID: 1709847331}
   - {fileID: 254758848}
   - {fileID: 2139486926}
   - {fileID: 1650234633}
-  - {fileID: 1577092981}
-  - {fileID: 904317990}
   - {fileID: 1446604714}
   - {fileID: 1860845910}
   - {fileID: 709372078}
-  - {fileID: 1419175263}
   - {fileID: 2095616122}
   - {fileID: 2063057452}
   - {fileID: 949536535}
@@ -4449,11 +4454,17 @@ Transform:
   - {fileID: 183627891}
   - {fileID: 415398452}
   - {fileID: 2102216888}
-  - {fileID: 1796334355}
   - {fileID: 665235682}
   - {fileID: 1766950779}
   - {fileID: 1810867388}
   - {fileID: 534410284}
+  - {fileID: 514200736}
+  - {fileID: 2040786820}
+  - {fileID: 856505122}
+  - {fileID: 904317990}
+  - {fileID: 1577092981}
+  - {fileID: 1419175263}
+  - {fileID: 1796334355}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1315431290
@@ -4702,6 +4713,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1310724915}
     m_Modifications:
+    - target: {fileID: -8561016988314320162, guid: d35503c960a90ff409e9487296fe0f85, type: 3}
+      propertyPath: effectPrefab
+      value: 
+      objectReference: {fileID: 144344, guid: cd6cd4f9bcaab9d4989dcdae112a3e7c, type: 3}
     - target: {fileID: 1365554409948784, guid: d35503c960a90ff409e9487296fe0f85, type: 3}
       propertyPath: m_Name
       value: Item (3)
@@ -4771,6 +4786,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1310724915}
     m_Modifications:
+    - target: {fileID: -8561016988314320162, guid: d35503c960a90ff409e9487296fe0f85, type: 3}
+      propertyPath: effectPrefab
+      value: 
+      objectReference: {fileID: 144344, guid: cd6cd4f9bcaab9d4989dcdae112a3e7c, type: 3}
     - target: {fileID: 1365554409948784, guid: d35503c960a90ff409e9487296fe0f85, type: 3}
       propertyPath: m_Name
       value: Item (5)
@@ -5346,6 +5365,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1310724915}
     m_Modifications:
+    - target: {fileID: -8561016988314320162, guid: d35503c960a90ff409e9487296fe0f85, type: 3}
+      propertyPath: effectPrefab
+      value: 
+      objectReference: {fileID: 144344, guid: cd6cd4f9bcaab9d4989dcdae112a3e7c, type: 3}
     - target: {fileID: 1365554409948784, guid: d35503c960a90ff409e9487296fe0f85, type: 3}
       propertyPath: m_Name
       value: Item (1)
@@ -5704,6 +5727,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1310724915}
     m_Modifications:
+    - target: {fileID: -8561016988314320162, guid: d35503c960a90ff409e9487296fe0f85, type: 3}
+      propertyPath: effectPrefab
+      value: 
+      objectReference: {fileID: 144344, guid: cd6cd4f9bcaab9d4989dcdae112a3e7c, type: 3}
     - target: {fileID: 1365554409948784, guid: d35503c960a90ff409e9487296fe0f85, type: 3}
       propertyPath: m_Name
       value: Item
@@ -5788,6 +5815,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1310724915}
     m_Modifications:
+    - target: {fileID: -8561016988314320162, guid: d35503c960a90ff409e9487296fe0f85, type: 3}
+      propertyPath: effectPrefab
+      value: 
+      objectReference: {fileID: 144344, guid: cd6cd4f9bcaab9d4989dcdae112a3e7c, type: 3}
     - target: {fileID: 1365554409948784, guid: d35503c960a90ff409e9487296fe0f85, type: 3}
       propertyPath: m_Name
       value: Item (4)

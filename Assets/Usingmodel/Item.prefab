@@ -119,3 +119,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotateSpeed: 30
+  effectPrefab: {fileID: 144344, guid: cd6cd4f9bcaab9d4989dcdae112a3e7c, type: 3}

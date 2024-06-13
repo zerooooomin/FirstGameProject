@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 8b7dd0809c7c6498789fa32a61eaa6cb, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.3201431, g: 0.25861406, b: 0.3684007, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2602,6 +2602,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 5
+  zoomSpeed: 2
+  minZoom: 5
+  maxZoom: 20
 --- !u!81 &1287594492
 AudioListener:
   m_ObjectHideFlags: 0
@@ -3076,12 +3079,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer: {fileID: 271316149}
   recordedTimesText: {fileID: 0}
-  startButtonAudioSource: {fileID: 0}
-  closeButtonAudioSource: {fileID: 0}
-  recordButtonAudioSource: {fileID: 0}
-  startButtonSound: {fileID: 0}
-  closeButtonSound: {fileID: 0}
-  recordButtonSound: {fileID: 0}
 --- !u!4 &1521424558
 Transform:
   m_ObjectHideFlags: 0

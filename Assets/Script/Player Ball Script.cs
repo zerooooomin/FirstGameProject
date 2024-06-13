@@ -102,7 +102,7 @@ public class PlayerBall : MonoBehaviour
         }
         else if (collision.gameObject.CompareTag("SuperJumpZone"))
         {
-            float jumpZoneJumpPower = 33f; // 슈퍼점프존의 점프 힘 조절
+            float jumpZoneJumpPower = 35f; // 슈퍼점프존의 점프 힘 조절
             isJump = true;
             rigid.AddForce(Vector3.up * jumpZoneJumpPower, ForceMode.Impulse);
             PlaySound(superJumpZoneSound, 1.0f); // 슈퍼점프존 소리 볼륨 조절 (예시로 1.0)
