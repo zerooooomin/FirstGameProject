@@ -1,19 +1,20 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
     public Timer timer;
-    public Text recordedTimesText; // Canvas에 있는 Text UI 요소를 참조
+    public Text recordedTimesText;
 
-
-    public void StartGame()
+    // 시작 버튼을 클릭했을 때 호출될 메서드
+    public void OnStartButtonClick()
     {
         if (timer != null)
         {
             timer.StartTimer();
         }
+
         LoadSceneByNumber(1); // 1번 씬으로 시작
     }
 
@@ -26,6 +27,8 @@ public class SceneLoader : MonoBehaviour
     // 게임을 종료하는 메서드
     public void QuitGame()
     {
+        Debug.Log("QuitGame called"); // 추가된 디버그 로그
+
         // 에디터 모드에서 게임 종료
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
@@ -43,7 +46,6 @@ public class SceneLoader : MonoBehaviour
         timer.PrintRecordedTimes(); // 기록된 시간을 출력
         timer.ResetTimer();
 
-        //Invoke("ReturnToMainMenu", 2); // 2초뒤 LaunchProjectile함수 호출
         ReturnToMainMenu();
     }
 

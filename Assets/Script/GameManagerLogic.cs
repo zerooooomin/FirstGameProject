@@ -13,7 +13,14 @@ public class GameManagerLogic : MonoBehaviour
 
     void Awake()
     {
-        stageCountText.text = "/ " + totalItemCount;
+        if (stageCountText != null)
+        {
+            stageCountText.text = "/ " + totalItemCount;
+        }
+        else
+        {
+            Debug.LogError("stageCountText is not assigned in GameManagerLogic!");
+        }
     }
 
     public void GetItem(int count)

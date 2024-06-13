@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -18,15 +17,19 @@ public class PlayerBall : MonoBehaviour
     private SceneLoader sceneLoader;
     private bool isSpeedBoostActive = false; // 속도 증가 상태 변수
 
+    public AudioClip jumpZoneSound;        // 점프존 소리
+    public AudioClip superJumpZoneSound;   // 슈퍼 점프존 소리
+    public AudioClip itemCollectSound;     // 아이템획득 소리
+    public AudioClip jumpSound;            // 점프 소리
+    public AudioClip finishPointSound;     // 피니시포인트 소리
+    public AudioClip speedBoostSound;      // 속도 부스트 소리 추가
+
     void Start()
     {
-        // 코드를 통해 cameraTransform 변수에 값을 할당합니다.
+        // cameraTransform 변수에 값을 할당합니다.
         cameraTransform = Camera.main.transform;
-    }
 
-    private void Awake()
-    {
-        isJump = false;
+        // Rigidbody와 AudioSource 컴포넌트를 초기화합니다.
         rigid = GetComponent<Rigidbody>();
         audio = GetComponent<AudioSource>();
 
@@ -44,9 +47,11 @@ public class PlayerBall : MonoBehaviour
         {
             isJump = true;
             rigid.AddForce(Vector3.up * jumpPower, ForceMode.Impulse);
+
+            // 새로 추가한 AudioClip 재생
+            PlaySound(jumpSound, 1.0f); // 예시로 볼륨은 1.0으로 설정
         }
 
-        // 마우스 왼쪽 버튼 클릭 시 속도 증가
         if (Input.GetMouseButtonDown(0) && !isSpeedBoostActive)
         {
             StartCoroutine(SpeedBoost());
@@ -88,19 +93,21 @@ public class PlayerBall : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "JumpZone")
+        if (collision.gameObject.CompareTag("JumpZone"))
         {
-            float jumpZoneJumpPower = 11f; // 점프존의 점프 힘 조절
+            float jumpZoneJumpPower = 11.5f; // 점프존의 점프 힘 조절
             isJump = true;
             rigid.AddForce(Vector3.up * jumpZoneJumpPower, ForceMode.Impulse);
+            PlaySound(jumpZoneSound, 0.5f); // 점프존 소리 볼륨 조절 (예시로 0.5)
         }
-        else if (collision.gameObject.tag == "SuperJumpZone")
+        else if (collision.gameObject.CompareTag("SuperJumpZone"))
         {
-            float jumpZoneJumpPower = 31f; // 점프존의 점프 힘 조절
+            float jumpZoneJumpPower = 33f; // 슈퍼점프존의 점프 힘 조절
             isJump = true;
             rigid.AddForce(Vector3.up * jumpZoneJumpPower, ForceMode.Impulse);
+            PlaySound(superJumpZoneSound, 1.0f); // 슈퍼점프존 소리 볼륨 조절 (예시로 1.0)
         }
-        else if (collision.gameObject.tag == "Floor")
+        else if (collision.gameObject.CompareTag("Floor"))
         {
             isJump = false;
         }
@@ -108,47 +115,67 @@ public class PlayerBall : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Item")
+        if (other.CompareTag("Item"))
         {
             itemCount++;
-            GetComponent<AudioSource>().Play();
             other.gameObject.SetActive(false);
-            manager.GetItem(itemCount);
+            if (manager != null)
+            {
+                manager.GetItem(itemCount);
+            }
             Debug.Log("Item collected. Total items: " + itemCount);
+            PlaySound(itemCollectSound, 0.8f); // 아이템 획득 사운드 조절
         }
-        else if (other.tag == "Point")
+        else if (other.CompareTag("Point"))
         {
             Debug.Log("Reached Point with item count: " + itemCount);
             if (itemCount == manager.totalItemCount)
             {
                 Debug.Log("All items collected. Proceed to next stage.");
-                // Game Clear! && Next Stage
-                if (manager.stage == 7)
+                if (manager != null)
                 {
-                    Debug.Log("Last stage reached, calling FinishGame");
-                    sceneLoader.FinishGame(); // FinishGame 메서드 호출
-                }
-                else
-                {
-                    SceneManager.LoadScene(manager.stage + 1);
+                    if (manager.stage == 7)
+                    {
+                        Debug.Log("Last stage reached, calling FinishGame");
+                        if (sceneLoader != null)
+                        {
+                            sceneLoader.FinishGame();
+                        }
+                    }
+                    else
+                    {
+                        SceneManager.LoadScene(manager.stage + 1);
+                    }
                 }
             }
             else
             {
                 Debug.Log("Not all items collected. Restart stage.");
-                // Restart Stage
-                SceneManager.LoadScene(manager.stage);
+                if (manager != null)
+                {
+                    SceneManager.LoadScene(manager.stage);
+                }
             }
+            BackgroundMusic.Instance.PlayEffectSound(finishPointSound, 1.0f); // 피니시 포인트 소리 재생
         }
     }
 
-    // 속도 증가 코루틴
     IEnumerator SpeedBoost()
     {
         isSpeedBoostActive = true;
         moveSpeed *= 2; // 속도 2배 증가
-        yield return new WaitForSeconds(1); // 3초간 지속
+        PlaySound(speedBoostSound, 1.0f); // 속도 부스트 소리 재생 (예시로 볼륨 1.0)
+        yield return new WaitForSeconds(1); // 1초간 지속
         moveSpeed /= 2; // 원래 속도로 복귀
         isSpeedBoostActive = false;
+    }
+
+    // 소리를 재생하는 메서드
+    void PlaySound(AudioClip clip, float volume)
+    {
+        if (clip != null && audio != null)
+        {
+            audio.PlayOneShot(clip, volume);
+        }
     }
 }

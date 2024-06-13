@@ -95,9 +95,6 @@ ScriptsOnlyBuild:
     fullTypeName: SceneLoader
     methodName: LoadSceneByNumber
   - assembly: Assembly-CSharp
-    fullTypeName: SceneLoader
-    methodName: StartGame
-  - assembly: Assembly-CSharp
     fullTypeName: RecordViewer
     methodName: CloseRecords
   sceneClasses:
@@ -169,13 +166,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 6090}
     - Class: 114
-      Script: {instanceID: 24202}
+      Script: {instanceID: 180256}
     - Class: 114
-      Script: {instanceID: 24210}
+      Script: {instanceID: 180264}
     - Class: 114
-      Script: {instanceID: 24212}
+      Script: {instanceID: 180266}
     - Class: 114
-      Script: {instanceID: 24214}
+      Script: {instanceID: 180268}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -984,7 +981,7 @@ ScriptsOnlyBuild:
     className: UnityOnBecameVisibleMessageListener
   - hash:
       serializedVersion: 2
-      Hash: fbead59261d4e8a5ea9fd1e174761bfc
+      Hash: 5892b69d5296380f6f3ec61575508e65
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: SceneLoader
@@ -1878,7 +1875,7 @@ ScriptsOnlyBuild:
     className: ScrollRect
   - hash:
       serializedVersion: 2
-      Hash: 2d16b3a6d9178132ac2840ae86d7a2c1
+      Hash: dcc2e1064533c7f24d6a5d8b9e8ae515
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: PlayerBall
@@ -2018,5 +2015,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Example1_4.unity
   - Assets/Scenes/Example1_5.unity
   - Assets/Scenes/Example1_6.unity
-  playerPath: "C:/Users/Kim/OneDrive/\uBC14\uD0D5 \uD654\uBA74/\uAC8C\uC784\uD504\uB85C\uADF8\uB798\uBC0D
-    exe/MyFirstGame.exe"
+  playerPath: "C:/Users/skybl/OneDrive/\uBC14\uD0D5 \uD654\uBA74/build/MyFirstGame.exe"

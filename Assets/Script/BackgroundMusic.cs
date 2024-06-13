@@ -28,7 +28,17 @@ public class BackgroundMusic : MonoBehaviour
         if (audioSource != null)
         {
             audioSource.loop = true;
+            audioSource.volume = 0.3f; // 배경음악의 볼륨을 0.3로 설정
             audioSource.Play();
+        }
+    }
+
+    // 피니쉬포인트 소리를 재생하는 메서드. 설정은 player Ball 스크립트에서. 씬 전환되면 소리가 끊켜서 여기서 소리나는걸로했습니다.
+    public void PlayEffectSound(AudioClip clip, float volume)
+    {
+        if (clip != null && GetComponent<AudioSource>() != null)
+        {
+            GetComponent<AudioSource>().PlayOneShot(clip, volume);
         }
     }
 }
