@@ -24,14 +24,31 @@ public class PlayerBall : MonoBehaviour
     public AudioClip finishPointSound;     // 피니시포인트 소리
     public AudioClip speedBoostSound;      // 속도 부스트 소리 추가
 
+    //void Start()
+    //{
+    //    // cameraTransform 변수에 값을 할당합니다.
+    //    cameraTransform = Camera.main.transform;
+
+    //    // Rigidbody와 AudioSource 컴포넌트를 초기화합니다.
+    //    rigid = GetComponent<Rigidbody>();
+    //    audio = GetComponent<AudioSource>();
+
+    //    // SceneLoader 오브젝트 찾기
+    //    sceneLoader = FindObjectOfType<SceneLoader>();
+    //    if (sceneLoader == null)
+    //    {
+    //        Debug.LogError("SceneLoader component not found on SceneManager object.");
+    //    }
+    //}
+
     void Start()
     {
-        // cameraTransform 변수에 값을 할당합니다.
-        cameraTransform = Camera.main.transform;
-
         // Rigidbody와 AudioSource 컴포넌트를 초기화합니다.
         rigid = GetComponent<Rigidbody>();
         audio = GetComponent<AudioSource>();
+
+        // cameraTransform 변수를 Main Camera의 transform으로 설정합니다.
+        cameraTransform = Camera.main.transform;
 
         // SceneLoader 오브젝트 찾기
         sceneLoader = FindObjectOfType<SceneLoader>();
@@ -40,6 +57,7 @@ public class PlayerBall : MonoBehaviour
             Debug.LogError("SceneLoader component not found on SceneManager object.");
         }
     }
+
 
     void Update()
     {

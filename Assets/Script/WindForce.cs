@@ -6,7 +6,7 @@ namespace MyGame
 {
     public class WindForce : MonoBehaviour
     {
-        public float windStrength = 5f; // 바람 세기
+        public float windStrength = 270f; // 바람 세기
         public Vector3 windDirection = new Vector3(1, 0, 0); // 바람 방향
 
         private void OnTriggerStay(Collider other)

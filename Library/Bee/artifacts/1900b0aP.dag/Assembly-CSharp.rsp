@@ -323,6 +323,7 @@
 "Assets/Script/CameraMove.cs"
 "Assets/Script/FloorDrop.cs"
 "Assets/Script/GameManagerLogic.cs"
+"Assets/Script/GamePause.cs"
 "Assets/Script/ItemCan.cs"
 "Assets/Script/Player Ball Script.cs"
 "Assets/Script/RecordViewer.cs"
