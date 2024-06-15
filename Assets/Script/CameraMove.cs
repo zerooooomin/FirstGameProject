@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement; // 씬 관리를 위한 네임스페이스 추가
 
 public class CameraMove : MonoBehaviour
 {
@@ -19,6 +20,10 @@ public class CameraMove : MonoBehaviour
     {
         Cursor.visible = false; // 마우스를 화면에서 숨김
         Cursor.lockState = CursorLockMode.Locked; // 마우스를 화면 중앙에 고정
+
+        // PlayerPrefs에서 저장된 값을 로드
+        rotationSpeed = PlayerPrefs.GetFloat("RotationSpeed", rotationSpeed);
+        zoomSpeed = PlayerPrefs.GetFloat("ZoomSpeed", zoomSpeed);
     }
 
     void Update()
@@ -28,14 +33,19 @@ public class CameraMove : MonoBehaviour
             // 키보드 입력을 기반으로 회전 속도 조절
             if (Input.GetKeyDown(KeyCode.LeftBracket))
             {
-                rotationSpeed -= 1.0f;
-                DisplaySpeed();
-                Debug.Log("Rotation speed decreased to: " + rotationSpeed);
+                if (rotationSpeed > 1.0f) // 최소값을 1.0f로 설정
+                {
+                    rotationSpeed -= 1.0f;
+                    SaveSettings();
+                    DisplaySpeed();
+                    Debug.Log("Rotation speed decreased to: " + rotationSpeed);
+                }
             }
 
             if (Input.GetKeyDown(KeyCode.RightBracket))
             {
                 rotationSpeed += 1.0f;
+                SaveSettings();
                 DisplaySpeed();
                 Debug.Log("Rotation speed increased to: " + rotationSpeed);
             }
@@ -49,8 +59,6 @@ public class CameraMove : MonoBehaviour
 
             offset = camTurnAngle * camTiltAngle * offset;
         }
-
-        // 기타 로직 (줌 등) 추가
     }
 
     void DisplaySpeed()
@@ -75,12 +83,6 @@ public class CameraMove : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
         speedText.text = ""; // 텍스트 지우기
-    }
-
-    void OnEnable()
-    {
-        Cursor.visible = true; // 마우스를 화면에 보이게 함
-        Cursor.lockState = CursorLockMode.None; // 마우스를 자유롭게 움직이도록 설정
     }
 
     void Awake()
@@ -112,4 +114,12 @@ public class CameraMove : MonoBehaviour
     {
         canRotate = enable;
     }
+
+    void SaveSettings()
+    {
+        PlayerPrefs.SetFloat("RotationSpeed", rotationSpeed);
+        PlayerPrefs.SetFloat("ZoomSpeed", zoomSpeed);
+        PlayerPrefs.Save();
+    }
+
 }

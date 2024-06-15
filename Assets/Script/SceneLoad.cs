@@ -4,7 +4,21 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
+    public static SceneLoader Instance; // Singleton 인스턴스
+
     public Text recordedTimesText;
+
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject); // 이미 인스턴스가 있으면 새로 생성된 것을 파괴
+        }
+    }
 
     private void Start()
     {
@@ -57,9 +71,11 @@ public class SceneLoader : MonoBehaviour
         ReturnToMainMenu();
     }
 
-    private void ReturnToMainMenu()
+    public void ReturnToMainMenu()
     {
         Debug.Log("Returning to Main Menu");
+        Cursor.visible = true; // 마우스를 보이게 설정
+        Cursor.lockState = CursorLockMode.None;
         SceneManager.LoadScene(0); // 메인 메뉴 씬 번호를 0으로 가정
     }
 }

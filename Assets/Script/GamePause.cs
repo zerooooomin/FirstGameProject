@@ -32,16 +32,15 @@ public class GamePause : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        // 게임이 일시 정지 상태가 아닐 때만 ESC 키 입력을 받아 처리합니다.
+        if (!isPaused && Input.GetKeyDown(KeyCode.Escape))
         {
-            if (isPaused)
-            {
-                ResumeGame(); // 일시 정지 상태 해제
-            }
-            else
-            {
-                PauseGame(); // 일시 정지 상태 설정
-            }
+            PauseGame(); // 일시 정지 상태 설정
+        }
+        // 일시 정지 상태에서 ESC 키 입력을 받아 처리합니다.
+        else if (isPaused && Input.GetKeyDown(KeyCode.Escape))
+        {
+            ResumeGame(); // 일시 정지 상태 해제
         }
     }
 
@@ -94,6 +93,8 @@ public class GamePause : MonoBehaviour
             // 마우스 커서를 숨기고 화면 중앙에 고정합니다.
             Cursor.visible = false;
             Cursor.lockState = CursorLockMode.Locked;
+            Debug.Log("Cursor.visible: " + Cursor.visible);
+            Debug.Log("Cursor.lockState: " + Cursor.lockState);
         }
     }
 

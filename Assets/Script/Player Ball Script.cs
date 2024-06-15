@@ -13,7 +13,7 @@ public class PlayerBall : MonoBehaviour
     Rigidbody rigid;
     AudioSource audio;
     public Transform cameraTransform;
-
+   
     private SceneLoader sceneLoader;
     private bool isSpeedBoostActive = false; // 속도 증가 상태 변수
 
@@ -23,23 +23,6 @@ public class PlayerBall : MonoBehaviour
     public AudioClip jumpSound;            // 점프 소리
     public AudioClip finishPointSound;     // 피니시포인트 소리
     public AudioClip speedBoostSound;      // 속도 부스트 소리 추가
-
-    //void Start()
-    //{
-    //    // cameraTransform 변수에 값을 할당합니다.
-    //    cameraTransform = Camera.main.transform;
-
-    //    // Rigidbody와 AudioSource 컴포넌트를 초기화합니다.
-    //    rigid = GetComponent<Rigidbody>();
-    //    audio = GetComponent<AudioSource>();
-
-    //    // SceneLoader 오브젝트 찾기
-    //    sceneLoader = FindObjectOfType<SceneLoader>();
-    //    if (sceneLoader == null)
-    //    {
-    //        Debug.LogError("SceneLoader component not found on SceneManager object.");
-    //    }
-    //}
 
     void Start()
     {
@@ -56,8 +39,14 @@ public class PlayerBall : MonoBehaviour
         {
             Debug.LogError("SceneLoader component not found on SceneManager object.");
         }
-    }
 
+        // GameManagerLogic 오브젝트 찾기
+        manager = FindObjectOfType<GameManagerLogic>();
+        if (manager == null)
+        {
+            Debug.LogError("GameManagerLogic component not found in the scene.");
+        }
+    }
 
     void Update()
     {
@@ -141,40 +130,51 @@ public class PlayerBall : MonoBehaviour
             {
                 manager.GetItem(itemCount);
             }
+            else
+            {
+                Debug.LogError("Manager is null! Please ensure it is assigned.");
+            }
             Debug.Log("Item collected. Total items: " + itemCount);
             PlaySound(itemCollectSound, 0.8f); // 아이템 획득 사운드 조절
         }
         else if (other.CompareTag("Point"))
         {
             Debug.Log("Reached Point with item count: " + itemCount);
+
+            if (manager == null)
+            {
+                Debug.LogError("Manager is null! Please ensure it is assigned.");
+                return; // manager가 null인 경우 더 이상 진행하지 않음
+            }
+
             if (itemCount == manager.totalItemCount)
             {
                 Debug.Log("All items collected. Proceed to next stage.");
-                if (manager != null)
+
+                if (manager.stage == 7)
                 {
-                    if (manager.stage == 7)
+                    Debug.Log("Last stage reached, calling FinishGame without playing finish point sound");
+
+                    if (sceneLoader != null)
                     {
-                        Debug.Log("Last stage reached, calling FinishGame");
-                        if (sceneLoader != null)
-                        {
-                            sceneLoader.FinishGame();
-                        }
+                        sceneLoader.FinishGame();
                     }
-                    else
-                    {
-                        SceneManager.LoadScene(manager.stage + 1);
-                    }
+                }
+                else
+                {
+                    SceneManager.LoadScene(manager.stage + 1);
                 }
             }
             else
             {
                 Debug.Log("Not all items collected. Restart stage.");
-                if (manager != null)
-                {
-                    SceneManager.LoadScene(manager.stage);
-                }
+                SceneManager.LoadScene(manager.stage);
             }
-            BackgroundMusic.Instance.PlayEffectSound(finishPointSound, 1.0f); // 피니시 포인트 소리 재생
+
+            if (manager.stage != 7) // 마지막 스테이지가 아닌 경우에만 피니시 포인트 소리 재생
+            {
+                BackgroundMusic.Instance.PlayEffectSound(finishPointSound, 1.0f);
+            }
         }
     }
 
