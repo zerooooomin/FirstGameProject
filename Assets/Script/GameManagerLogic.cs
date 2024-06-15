@@ -44,15 +44,9 @@ public class GameManagerLogic : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            // 플레이어가 충돌했을 때 현재 스테이지 번호와 전체 스테이지 개수 비교
-            if (stage == SceneManager.sceneCountInBuildSettings - 1) // 마지막 스테이지인 경우
-            {
-                SceneLoader.Instance.ReturnToMainMenu(); // SceneLoader의 ReturnToMainMenu 메서드 호출
-            }
-            else
-            {
+            
                 SceneManager.LoadScene(stage); // 마지막 스테이지가 아니면 현재 스테이지 재로딩
-            }
+            
         }
     }
 }

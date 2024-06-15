@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.32014108, g: 0.2586147, b: 0.36836863, a: 1}
+  m_IndirectSpecularColor: {r: 0.3201431, g: 0.25861406, b: 0.3684007, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1297,6 +1297,10 @@ PrefabInstance:
       propertyPath: arrivePoint
       value: 
       objectReference: {fileID: 746011957}
+    - target: {fileID: 7068992312607626792, guid: 88a567c498c1a884986d9f86d812979d, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: d554c99b04edf854d80958e15d3ea5bc, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -1647,6 +1651,10 @@ PrefabInstance:
       propertyPath: arrivePoint
       value: 
       objectReference: {fileID: 494932128}
+    - target: {fileID: 7068992312607626792, guid: 88a567c498c1a884986d9f86d812979d, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: d554c99b04edf854d80958e15d3ea5bc, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -2968,7 +2976,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6251554614774726463, guid: 65297198f2b319342a6bce7ba977337e, type: 3}
       propertyPath: m_text
-      value: 2020
+      value: B
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3081,7 +3089,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6251554614774726463, guid: 65297198f2b319342a6bce7ba977337e, type: 3}
       propertyPath: m_text
-      value: 2014
+      value: C
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3214,7 +3222,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6251554614774726463, guid: 65297198f2b319342a6bce7ba977337e, type: 3}
       propertyPath: m_text
-      value: 2018
+      value: A+
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3541,7 +3549,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6251554614774726463, guid: 65297198f2b319342a6bce7ba977337e, type: 3}
       propertyPath: m_text
-      value: When is the Pyeongchang Olympics?
+      value: What grades do we want?
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4562,6 +4570,10 @@ PrefabInstance:
       propertyPath: arrivePoint
       value: 
       objectReference: {fileID: 3423388301955825243}
+    - target: {fileID: 7068992312607626792, guid: 88a567c498c1a884986d9f86d812979d, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: d554c99b04edf854d80958e15d3ea5bc, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
