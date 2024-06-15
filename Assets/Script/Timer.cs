@@ -13,7 +13,6 @@ public class Timer : MonoBehaviour
 
     public Text timerText; // UI 텍스트 컴포넌트 참조
     private float startTime;
-    private float elapsedTime; // 씬이 변경될 때 경과 시간 저장
     public bool isTiming = false;
     public Stack<float> timeRecords = new Stack<float>(); // 시간을 저장할 스택
 
@@ -30,7 +29,6 @@ public class Timer : MonoBehaviour
         instance = this;
         DontDestroyOnLoad(this.gameObject);
 
-       
         FindTimerText(); // 최초 한 번만 호출됨
     }
 
@@ -41,29 +39,22 @@ public class Timer : MonoBehaviour
 
     void FindTimerText()
     {
-        if (timerText == null)
+        GameObject timerTextObject = GameObject.Find("TimerText");
+        if (timerTextObject != null)
         {
-            GameObject timerTextObject = GameObject.Find("TimerText");
-            if (timerTextObject != null)
+            timerText = timerTextObject.GetComponent<Text>();
+            if (timerText != null)
             {
-                timerText = timerTextObject.GetComponent<Text>();
-                if (timerText != null)
-                {
-                    Debug.Log("TimerText found"); // 타이머텍스트를 찾았지만 씬이 바뀔때 반복출력되면 문제임
-                }
-                else
-                {
-                    Debug.LogWarning("TimerText component not found on GameObject 'TimerText'");
-                }
+                Debug.Log("TimerText found");
             }
             else
             {
-                Debug.LogWarning("GameObject 'TimerText' not found");
+                Debug.LogWarning("TimerText component not found on GameObject 'TimerText'");
             }
         }
         else
         {
-            Debug.Log("timerText already assigned"); // 타이머가 null값이 아니면 이 메세지 출력
+            Debug.LogWarning("GameObject 'TimerText' not found");
         }
     }
 
@@ -75,13 +66,6 @@ public class Timer : MonoBehaviour
             string minutes = ((int)t / 60).ToString("00");
             string seconds = (t % 60).ToString("00");
             timerText.text = minutes + ":" + seconds;
-
-            // 디버그 메시지 추가
-            //Debug.Log("Timer: " + minutes + ":" + seconds);
-        }
-        else
-        {
-            Debug.LogWarning("timerText is null or not found!"); // timerText가 null일 경우에 대한 디버그 메시지
         }
     }
 
@@ -89,19 +73,21 @@ public class Timer : MonoBehaviour
     {
         Debug.Log("Scene Loaded: " + scene.name);
 
-        if (scene.buildIndex == 0) // 0번째 스테이지 (메인 메뉴)인 경우
+        if (scene.buildIndex == 0) // 메인 메뉴 씬인 경우
         {
             Debug.Log("TIMER RESET");
             ResetTimer(); // 타이머 초기화
         }
-        else{
-            Debug.Log("Do Not Timer Reset");
+        else
+        {
+            FindTimerText(); // 씬 전환 시 TimerText를 다시 찾습니다.
         }
     }
+
     public void StartTimer()
     {
         Debug.Log("Timer Started");
-        startTime = Time.time;
+        startTime = Time.time - (GetElapsedTime() > 0 ? GetElapsedTime() : 0); // 이전 시간 유지
         isTiming = true;
 
         // 타이머 시작 시 timerText가 null이면 초기화 시도
