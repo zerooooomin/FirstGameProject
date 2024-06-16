@@ -78,10 +78,15 @@ public class Timer : MonoBehaviour
             Debug.Log("TIMER RESET");
             ResetTimer(); // 타이머 초기화
         }
-        else
+        else if (scene.buildIndex >= 1) // 1번 씬 이후인 경우 타이머 유지
         {
-            FindTimerText(); // 씬 전환 시 TimerText를 다시 찾습니다.
+            Debug.Log("Timer Resumed");
+            if (!isTiming)
+            {
+                StartTimer(); // 타이머 시작
+            }
         }
+        FindTimerText(); // 씬 전환 시 TimerText를 다시 찾습니다.
     }
 
     public void StartTimer()
@@ -107,7 +112,7 @@ public class Timer : MonoBehaviour
     {
         Debug.Log("Timer Reset");
         isTiming = false;
-        startTime = 0f;
+        startTime = Time.time; // 현재 시간으로 설정하여 00초로 초기화
         if (timerText != null) // timerText가 null이 아닌지 확인
         {
             timerText.text = "00:00";

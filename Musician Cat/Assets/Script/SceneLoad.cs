@@ -22,7 +22,10 @@ public class SceneLoader : MonoBehaviour
 
     private void Start()
     {
-        Timer.Instance.StartTimer(); // Timer 인스턴스의 StartTimer 메서드 호출
+        if (SceneManager.GetActiveScene().buildIndex != 0)
+        {
+            Timer.Instance.StartTimer(); // 타이머가 0번 씬이 아닐 때만 시작
+        }
     }
 
     private void OnDestroy()
@@ -34,6 +37,11 @@ public class SceneLoader : MonoBehaviour
     public void OnStartButtonClick()
     {
         Debug.Log("Start Button Clicked");
+
+        // 타이머를 00초로 초기화하고 시작
+        Timer.Instance.ResetTimer();
+        Timer.Instance.StartTimer();
+
         LoadSceneByNumber(1);
     }
 
