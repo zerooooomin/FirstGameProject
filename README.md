@@ -6,7 +6,6 @@ Musician Cat Game 폴더 안에 있는 Musician Cat Game.exe 파일을 실행시
 
 
 ##### 플레이 화면
-![스크린샷 2025-07-09 235805](https://github.com/user-attachments/assets/c7168a0d-7642-4efc-9937-8b1fd6b17606)
 ![스크린샷 2025-07-09 235808](https://github.com/user-attachments/assets/d32571c7-0d9e-4d84-9bd1-25bb4cbeb3c6)
 ![스크린샷 2025-07-09 235826](https://github.com/user-attachments/assets/f3b3ab24-88d7-4484-ac13-73818f4cda65)
 ![스크린샷 2025-07-09 235857](https://github.com/user-attachments/assets/698a06dc-7eac-4818-94ae-749edb21f379)
